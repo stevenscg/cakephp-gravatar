@@ -1,0 +1,28 @@
+Gravatar Tools for CakePHP 2.0
+
+
+This project separates the url generation from the CakePHP image tag
+generation in the helper.  It provides the same url generation capability
+as a component if you need to build avatar urls outside of the view context.
+
+The upstream CakePHP 1.X helper can be found here (packaged as a plugin):
+https://github.com/hharnett/cakephp-gravatar-helper
+
+
+Installation
+
+copy GravatarHelper.php to app/View/Helper/
+copy GravatarComponent.php to app/Controller/Component/
+
+
+Helper Usage
+
+In your controller:
+class MyController extends AppController {
+  public $helpers = array('Gravatar');
+...
+}
+
+In your view:
+<?php echo $this->Gravatar->image('guest@example.com', array('size' => 98), array('alt' => 'Gravatar')); ?>
+
