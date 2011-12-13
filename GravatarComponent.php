@@ -107,7 +107,7 @@ class GravatarComponent extends Component {
 			if (strpos($options['default'], 'http') === 0) {
 				$this->default = h($options['default']);
 			} else {
-				$this->default = hashEmail($options['default']);
+				$this->default = $options['default'];
 			}
 		}
 	}
